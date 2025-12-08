@@ -36,49 +36,70 @@ export default function Engage360LandingPage() {
   const stories = [
     {
       quote:
-        "We wanted one QR to do everything—rewards, feedback, and product verification. Engage360 gave us that, along with the ability to add new journeys without changing our packs.",
-      name: "[Client Name]",
-      title: "Head of Marketing",
-      company: "[Leading Manufacturing Brand]",
+        "Want to write about all things, services are very fast and genuine. All the team members are very humble and kind. Anytime, anywhere, if we got any kind of issue on our dashboard (system), all the team doing support like 'one click solution'. Overall, feel very good...",
+      name: "Nikhil Chavda",
+      title: "IT Coordinator",
+      company: "Bafit",
     },
     {
       quote:
-        "Engage360 helped us unify loyalty, feedback and authentication data in one place. Our trade schemes and consumer programs now run fully on QR.",
-      name: "[Client Name 2]",
-      title: "Sales & Distribution Head",
-      company: "[FMCG Brand]",
+        "We've been using Basiq360 for our dealer management and CRM needs, and the experience has been excellent. The platform is cloud-based, and packed with features that help streamline order management, sales tracking, and customer network oversight. Integration with accounting software like SAP Business One makes daily operations much smoother. Their support team is responsive and knowledgeable, and the system has helped us improve productivity and decision-making across the board. Highly recommend for any business looking to scale and simplify dealer operations.",
+      name: "Ravi Surelia",
+      title: "IT Head",
+      company: "Kelvin Pipes",
     },
     {
       quote:
-        "With one QR per pack, our teams get real-time visibility of secondary sales and counterfeiting hotspots—without overhauling our packaging lines.",
-      name: "[Client Name 3]",
-      title: "Digital Transformation Lead",
-      company: "[Auto Spares Brand]",
+        "Its been 2 years working with them and we have a great experience!team is super great and they are offering a great support.",
+      name: "Mudit Nanda",
+      title: "Zonal Sales Head",
+      company: "Bonus Locks",
+    },
+    {
+      quote:
+        "I had a great experience with Abacus Desk, The service provided by their team is also commendable, professional and helpful, i would definitely recommend Abacus Desk for Excellent Service.",
+      name: "Vikas Sharma",
+      title: "IT Manager",
+      company: "Sirca",
+    },
+    {
+      quote:
+        "Abacus Desk offers a wide range of services across Customer Experience (CX), Sales Customer Relationship Management (CRM), Enterprise Software, Martech, and Advertising. Their solutions are tailored to enhance client relationships and streamline business processes, ensuring a seamless customer journey. In the area of Enterprise Software, they deliver robust and scalable applications that support operational efficiency and business growth.",
+      name: "Ravish Ranjan",
+      title: "General Manager",
+      company: "Information Technology",
+    },
+    {
+      quote:
+        "We are extremely satisfied with the technical support provided by specially 'Mayank Harsh' and his team. Their expertise in DMS is exceptional they are highly knowledgeable, responsive, and consistently willing to assist with any issues we encounter.In addition to their technical capabilities, their professionalism and courteous behaviour have made every interaction seamless and positive. We truly value their dedication and consistent support.",
+      name: "Harrison IT",
+      title: "IT manager",
+      company: "Harrison IT",
     },
   ];
 
-  const pageSize = 3;
-  const totalPages = Math.ceil(stories.length / pageSize);
-  const [activePage, setActivePage] = useState(0);
+  // const pageSize = 3;
+  // const totalPages = Math.ceil(stories.length / pageSize);
+  // const [activePage, setActivePage] = useState(0);
 
-  const handlePrevStory = () => {
-    setActivePage((prev) => (prev === 0 ? totalPages - 1 : prev - 1));
-  };
+  // const handlePrevStory = () => {
+  //   setActivePage((prev) => (prev === 0 ? totalPages - 1 : prev - 1));
+  // };
 
-  const handleNextStory = () => {
-    setActivePage((prev) => (prev === totalPages - 1 ? 0 : prev + 1));
-  };
+  // const handleNextStory = () => {
+  //   setActivePage((prev) => (prev === totalPages - 1 ? 0 : prev + 1));
+  // };
 
-  const visibleStories = stories.slice(
-    activePage * pageSize,
-    activePage * pageSize + pageSize
-  );
+  // const visibleStories = stories.slice(
+  //   activePage * pageSize,
+  //   activePage * pageSize + pageSize
+  // );
 
   return (
     <div className="min-h-screen bg-slate-50 text-slate-900">
-      <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 pb-16">
+      {/* <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 pb-16"> */}
         {/* Header */}
-        <header className="flex items-center justify-between py-6">
+        <header className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 flex items-center justify-between py-6">
           <div className="flex items-center gap-2">
             {/* Replace with actual logo */}
             {/* <Link href="/" className="flex items-center gap-3" aria-label="Basiq360 Home">
@@ -127,98 +148,100 @@ export default function Engage360LandingPage() {
             </button>
           </div>
         </header>
-
+              
         {/* Hero Section */}
-        <section className="grid gap-10 py-10 md:grid-cols-2 md:items-center">
-          {/* Left: Copy */}
-          <div>
-            <div className="inline-flex items-center gap-2 rounded-full bg-blue-50 px-3 py-1 text-xs font-semibold text-[#004bab] mb-4">
-              <QrCode className="h-3 w-3" />
-              <span>One Smart QR. Four Powerful Journeys.</span>
-            </div>
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-semibold text-slate-900 tracking-tight mb-2">
-              Only 1 QR Code. Every Customer Journey.
-            </h1>
-            <p className="text-xs sm:text-sm font-medium text-slate-500 mb-4">
-              Loyalty • Feedback • Product Authentication • Track &amp; Trace
-            </p>
-            <p className="text-base sm:text-lg text-slate-600 mb-5 max-w-xl">
-              Engage360 turns a single variable QR on your pack into a smart trigger for engagement, protection, and
-              visibility—without changing your existing packaging or printing setup.
-            </p>
-
-            <ul className="space-y-1.5 mb-6 text-sm sm:text-base">
-              <li className="flex items-start gap-2">
-                <CheckCircle2 className="mt-0.5 h-4 w-4 text-[#00b894]" />
-                <span>1 smart QR instead of 4–5 separate codes.</span>
-              </li>
-              <li className="flex items-start gap-2">
-                <CheckCircle2 className="mt-0.5 h-4 w-4 text-[#00b894]" />
-                <span>One dashboard for all scans and journeys.</span>
-              </li>
-              <li className="flex items-start gap-2">
-                <CheckCircle2 className="mt-0.5 h-4 w-4 text-[#00b894]" />
-                <span>Plugs into your existing CRM, ERP and printers.</span>
-              </li>
-            </ul>
-
-            <div className="flex flex-wrap items-center gap-3 mb-4">
-              <button onClick={() => scrollToSection("contact")} className="inline-flex items-center rounded-full bg-[#004bab] px-6 py-2.5 text-sm font-semibold text-white shadow-lg hover:bg-[#003580] transition">
-                Book a Free Demo
-                <ArrowRight className="ml-2 h-4 w-4" />
-              </button>
-              <button onClick={() => scrollToSection("contact")} className="inline-flex items-center rounded-full border border-slate-300 bg-white px-5 py-2.5 text-sm font-medium text-slate-800 hover:bg-slate-100 transition">
-                Download Product Brochure
-              </button>
-            </div>
-            <p className="text-xs sm:text-sm text-slate-500">
-              Share your use-case and we’ll show you how one QR can power every key journey your business needs.
-            </p>
-          </div>
-
-          {/* Right: Video + QR mini story */}
-          <div className="relative">
-            <div
-              className="absolute -inset-4 rounded-3xl bg-gradient-to-tr from-blue-100 via-white to-indigo-100 blur-2xl opacity-70"
-              aria-hidden="true"
-            />
-            <div className="relative space-y-4 rounded-3xl bg-white p-6 shadow-xl border border-slate-100">
-              <div className="rounded-2xl overflow-hidden ">
-                <div className="aspect-video relative flex items-center justify-center">
-                  <video
-                    className="img-fluid w-full h-auto"
-                    autoPlay
-                    loop
-                    muted
-                    playsInline
-                  >
-                    <source src="Basiq 360 Suite.mp4" type="video/mp4" />
-                  </video>
-                  {/* <button
-                    type="button"
-                    className="z-10 flex items-center gap-2 rounded-full bg-white/95 px-4 py-2 text-xs sm:text-sm font-semibold text-slate-900 shadow-lg hover:bg-white"
-                  >
-                    <PlayCircle className="h-5 w-5 text-[#004bab]" />
-                    <span>Watch Engage360 in 90 Seconds</span>
-                  </button> */}
-                  {/* <div className="absolute inset-0 bg-gradient-to-tr from-slate-900/70 via-slate-900/40 to-slate-900/80" /> */}
-                  {/* <div className="absolute bottom-3 left-4 right-4 flex items-center justify-between text-[11px] sm:text-xs text-slate-100/90">
-                    <span>Single QR. Four Journeys. One Dashboard.</span>
-                    <span className="hidden sm:inline">Engage360 Product Walkthrough</span>
-                  </div> */}
-                </div>
+        <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 ">
+          <div className="grid gap-10 py-10 md:grid-cols-2 md:items-center">
+            {/* Left: Copy */}
+            <div className="w-full">
+              <div className="inline-flex items-center gap-2 rounded-full bg-blue-50 px-3 py-1 text-xs font-semibold text-[#004bab] mb-4">
+                <QrCode className="h-3 w-3" />
+                <span>One Smart QR. Four Powerful Journeys.</span>
               </div>
+              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-semibold text-slate-900 tracking-tight mb-2">
+                Only 1 QR Code. Every Customer Journey.
+              </h1>
+              <p className="text-xs sm:text-sm font-medium text-slate-500 mb-4">
+                Loyalty • Feedback • Product Authentication • Track &amp; Trace
+              </p>
+              <p className="text-base sm:text-lg text-slate-600 mb-5 max-w-xl">
+                Engage360 turns a single variable QR on your pack into a smart trigger for engagement, protection, and
+                visibility—without changing your existing packaging or printing setup.
+              </p>
 
-              <div className="rounded-2xl border border-slate-100 bg-slate-50 px-4 py-3 flex gap-3 items-start">
-                <div className="mt-0.5 flex h-9 w-9 items-center justify-center rounded-xl bg-white shadow-sm">
-                  <QrCode className="h-6 w-10 text-[#004bab]" />
+              <ul className="space-y-1.5 mb-6 text-sm sm:text-base">
+                <li className="flex items-start gap-2">
+                  <CheckCircle2 className="mt-0.5 h-4 w-4 text-[#00b894]" />
+                  <span>1 smart QR instead of 4–5 separate codes.</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <CheckCircle2 className="mt-0.5 h-4 w-4 text-[#00b894]" />
+                  <span>One dashboard for all scans and journeys.</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <CheckCircle2 className="mt-0.5 h-4 w-4 text-[#00b894]" />
+                  <span>Plugs into your existing CRM, ERP and printers.</span>
+                </li>
+              </ul>
+
+              <div className="flex flex-wrap items-center gap-3 mb-4">
+                <button onClick={() => scrollToSection("contact")} className="inline-flex items-center rounded-full bg-[#004bab] px-6 py-2.5 text-sm font-semibold text-white shadow-lg hover:bg-[#003580] transition">
+                  Book a Free Demo
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </button>
+                <button onClick={() => scrollToSection("contact")} className="inline-flex items-center rounded-full border border-slate-300 bg-white px-5 py-2.5 text-sm font-medium text-slate-800 hover:bg-slate-100 transition">
+                  Download Product Brochure
+                </button>
+              </div>
+              <p className="text-xs sm:text-sm text-slate-500">
+                Share your use-case and we’ll show you how one QR can power every key journey your business needs.
+              </p>
+            </div>
+
+            {/* Right: Video + QR mini story */}
+            <div className="relative">
+              <div
+                className="absolute -inset-4 rounded-3xl bg-gradient-to-tr from-blue-100 via-white to-indigo-100 blur-2xl opacity-70"
+                aria-hidden="true"
+              />
+              <div className="relative space-y-4 rounded-3xl bg-white p-6 shadow-xl border border-slate-100">
+                <div className="rounded-2xl overflow-hidden ">
+                  <div className="aspect-video relative flex items-center justify-center">
+                    <video
+                      className="img-fluid w-full h-auto"
+                      autoPlay
+                      loop
+                      muted
+                      playsInline
+                    >
+                      <source src="Basiq 360 Suite.mp4" type="video/mp4" />
+                    </video>
+                    {/* <button
+                      type="button"
+                      className="z-10 flex items-center gap-2 rounded-full bg-white/95 px-4 py-2 text-xs sm:text-sm font-semibold text-slate-900 shadow-lg hover:bg-white"
+                    >
+                      <PlayCircle className="h-5 w-5 text-[#004bab]" />
+                      <span>Watch Engage360 in 90 Seconds</span>
+                    </button> */}
+                    {/* <div className="absolute inset-0 bg-gradient-to-tr from-slate-900/70 via-slate-900/40 to-slate-900/80" /> */}
+                    {/* <div className="absolute bottom-3 left-4 right-4 flex items-center justify-between text-[11px] sm:text-xs text-slate-100/90">
+                      <span>Single QR. Four Journeys. One Dashboard.</span>
+                      <span className="hidden sm:inline">Engage360 Product Walkthrough</span>
+                    </div> */}
+                  </div>
                 </div>
-                <div>
-                  <p className="text-xs font-semibold text-slate-900 mb-0.5">Only 1 QR Code Your Business Needs</p>
-                  <p className="text-[11px] text-slate-500">
-                    First scan triggers onboarding or rewards, repeat scans collect feedback, and suspicious scans check
-                    authenticity—while every scan feeds your track & trace dashboard.
-                  </p>
+
+                <div className="rounded-2xl border border-slate-100 bg-slate-50 px-4 py-3 flex gap-3 items-start">
+                  <div className="mt-0.5 flex h-9 w-9 items-center justify-center rounded-xl bg-white shadow-sm">
+                    <QrCode className="h-6 w-10 text-[#004bab]" />
+                  </div>
+                  <div>
+                    <p className="text-xs font-semibold text-slate-900 mb-0.5">Only 1 QR Code Your Business Needs</p>
+                    <p className="text-[11px] text-slate-500">
+                      First scan triggers onboarding or rewards, repeat scans collect feedback, and suspicious scans check
+                      authenticity—while every scan feeds your track & trace dashboard.
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -226,7 +249,7 @@ export default function Engage360LandingPage() {
         </section>
 
         {/* Connected Core Features Strip */}
-        <section className="py-6 border-t border-slate-100">
+        <section className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-6 border-t border-slate-100">
           <div className="rounded-3xl bg-white border border-slate-100 p-5 sm:p-6 shadow-sm">
             <div className="flex flex-col gap-2 sm:flex-row sm:items-baseline sm:justify-between mb-4">
               <div>
@@ -302,7 +325,7 @@ export default function Engage360LandingPage() {
         </section>
 
         {/* Big Idea: Only One QR on the Pack */}
-        <section className="py-10 border-t border-slate-100" id="big-idea">
+        <section className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-10 border-t border-slate-100" id="big-idea">
           <div className="grid gap-8 md:grid-cols-[1.1fr,0.9fr] md:items-start">
             <div>
               <h2 className="text-2xl sm:text-3xl font-semibold text-slate-900 mb-3">
@@ -370,7 +393,7 @@ export default function Engage360LandingPage() {
         </section>
 
         {/* Four Core Journeys */}
-        <section className="py-12" id="features">
+        <section className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-12" id="features">
           <div className="flex items-baseline justify-between mb-6">
             <div>
               <h2 className="text-2xl sm:text-3xl font-semibold text-slate-900 mb-2">
@@ -439,7 +462,7 @@ export default function Engage360LandingPage() {
         </section>
 
         {/* Why Single QR Changes the Game (icon-based RTB) */}
-        <section className="py-10 border-t border-slate-100" id="rtd">
+        <section className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-10 border-t border-slate-100" id="rtd">
           <div className="mb-6 max-w-3xl">
             <h2 className="text-2xl sm:text-3xl font-semibold text-slate-900 mb-2">
               Why a Single QR Changes the Game.
@@ -474,7 +497,7 @@ export default function Engage360LandingPage() {
         </section>
 
         {/* Who It Is For (icon-based) */}
-        <section className="py-10 border-t border-slate-100" id="industries">
+        <section className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-10 border-t border-slate-100" id="industries">
           <div className="flex items-baseline justify-between mb-6">
             <div>
               <h2 className="text-2xl sm:text-3xl font-semibold text-slate-900 mb-2">
@@ -509,8 +532,9 @@ export default function Engage360LandingPage() {
           </p>
         </section>
 
+
         {/* Why Teams Choose + Customer Stories Carousel */}
-        <section className="py-10 border-t border-slate-100">
+        <section className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8py-10 border-t border-slate-100">
           <div className="grid gap-8 md:grid-cols-[1.2fr,0.8fr] md:items-start">
             <div>
               <h2 className="text-2xl sm:text-3xl font-semibold text-slate-900 mb-2">
@@ -549,7 +573,7 @@ export default function Engage360LandingPage() {
                     How brands are using one QR to power multiple journeys.
                   </p>
                 </div>
-                <div className="hidden sm:flex flex-col items-end gap-2 text-[11px] text-slate-400">
+                {/* <div className="hidden sm:flex flex-col items-end gap-2 text-[11px] text-slate-400">
                   <span>
                     {activePage + 1} / {totalPages}
                   </span>
@@ -571,11 +595,12 @@ export default function Engage360LandingPage() {
                       <ChevronRight className="h-3 w-3" />
                     </button>
                   </div>
-                </div>
+                </div> */}
               </div>
 
               <div className="space-y-3 mb-3">
-                {visibleStories.map((story, index) => (
+                {/* {visibleStories.map((story, index) => ( */}
+                  {stories.map((story, index) => (
                   <div
                     key={`${story.name}-${index}`}
                     className="rounded-2xl border border-slate-100 bg-slate-50/80 px-4 py-3"
@@ -589,7 +614,7 @@ export default function Engage360LandingPage() {
                 ))}
               </div>
 
-              <div className="flex sm:hidden items-center justify-between mb-3 text-[11px] text-slate-400">
+              {/* <div className="flex sm:hidden items-center justify-between mb-3 text-[11px] text-slate-400">
                 <span>
                   {activePage + 1} / {totalPages}
                 </span>
@@ -611,21 +636,22 @@ export default function Engage360LandingPage() {
                     <ChevronRight className="h-3 w-3" />
                   </button>
                 </div>
-              </div>
+              </div> */}
 
-              <div className="rounded-2xl bg-blue-50 px-4 py-3 text-xs text-slate-700">
+              {/* <div className="rounded-2xl bg-blue-50 px-4 py-3 text-xs text-slate-700">
                 <p className="font-semibold text-[#004bab] mb-1">Digitize. Automate. Grow.</p>
                 <p>
                   Engage360 is part of the Basiq360 suite—trusted for dealer management, loyalty, SFA, and QR-based
                   product authentication.
                 </p>
-              </div>
+              </div> */}
             </div>
           </div>
         </section>
 
+
         {/* FAQs */}
-        <section className="py-10 border-t border-slate-100" id="faqs">
+        <section className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-10 border-t border-slate-100" id="faqs">
           <div className="mb-6 max-w-3xl">
             <h2 className="text-2xl sm:text-3xl font-semibold text-slate-900 mb-2">FAQs</h2>
             <p className="text-sm sm:text-base text-slate-600">
@@ -656,8 +682,10 @@ export default function Engage360LandingPage() {
           </div>
         </section>
 
+
+
         {/* Final CTA with Form */}
-        <section id="contact" className="mt-10 rounded-3xl bg-gradient-to-r from-[#004bab] via-[#005fd1] to-[#004bab] px-6 py-10 text-white shadow-xl">
+        <section id="contact" className="mx-auto max-w-4xl mt-10 rounded-3xl bg-gradient-to-r from-[#004bab] via-[#005fd1] to-[#004bab] p-10 text-white shadow-xl">
           <div className="grid gap-6 md:grid-cols-[1.1fr,0.9fr] md:items-center">
             <div>
               <h2 className="text-2xl sm:text-3xl font-semibold mb-2">Turn Every Scan into a Moment of Truth.</h2>
@@ -681,65 +709,11 @@ export default function Engage360LandingPage() {
               </p>
 
               <ContactForm />
-
-
-
-              {/* <form className="space-y-3">
-                <div className="grid gap-3 sm:grid-cols-2">
-                  <div>
-                    <label className="block text-[10px] sm:text-xs font-medium text-blue-50 mb-1">Full Name</label>
-                    <input
-                      type="text"
-                      placeholder="Enter your name"
-                      className="w-full rounded-lg border border-blue-100/60 bg-white/95 px-3 py-2 text-xs sm:text-sm text-slate-900 placeholder:text-slate-400 outline-none focus:border-white focus:ring-1 focus:ring-white"
-                    />
-                  </div>
-                  <div>
-                    <label className="block text-[10px] sm:text-xs font-medium text-blue-50 mb-1">Work Email</label>
-                    <input
-                      type="email"
-                      placeholder="name@company.com"
-                      className="w-full rounded-lg border border-blue-100/60 bg-white/95 px-3 py-2 text-xs sm:text-sm text-slate-900 placeholder:text-slate-400 outline-none focus:border-white focus:ring-1 focus:ring-white"
-                    />
-                  </div>
-                </div>
-                <div className="grid gap-3 sm:grid-cols-2">
-                  <div>
-                    <label className="block text-[10px] sm:text-xs font-medium text-blue-50 mb-1">Company</label>
-                    <input
-                      type="text"
-                      placeholder="Brand / Manufacturer"
-                      className="w-full rounded-lg border border-blue-100/60 bg-white/95 px-3 py-2 text-xs sm:text-sm text-slate-900 placeholder:text-slate-400 outline-none focus:border-white focus:ring-1 focus:ring-white"
-                    />
-                  </div>
-                  <div>
-                    <label className="block text-[10px] sm:text-xs font-medium text-blue-50 mb-1">Primary Use-Case</label>
-                    <select className="w-full rounded-lg border border-blue-100/60 bg-white/95 px-3 py-2 text-xs sm:text-sm text-slate-900 outline-none focus:border-white focus:ring-1 focus:ring-white">
-                      <option>Loyalty & Rewards</option>
-                      <option>Customer Feedback</option>
-                      <option>Product Authentication</option>
-                      <option>Track & Trace / Secondary Sales</option>
-                      <option>All of the above</option>
-                    </select>
-                  </div>
-                </div>
-                <button
-                  type="submit"
-                  className="flex w-full items-center justify-center rounded-full bg-white px-4 py-2.5 text-xs sm:text-sm font-semibold text-[#004bab] shadow-md hover:bg-blue-50 transition"
-                >
-                  Submit & Book Demo
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </button>
-                <p className="text-[9px] sm:text-[10px] text-blue-100/80 text-center">
-                  By submitting, you agree to be contacted by the Basiq360 team regarding Engage360 demos and product
-                  updates.
-                </p>
-              </form> */}
             </div>
           </div>
         </section>
       </div>
-    </div>
+    // </div>
   );
 }
 
