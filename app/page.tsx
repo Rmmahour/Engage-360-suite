@@ -21,6 +21,7 @@ import Link from "next/link"
 import Image from "next/image"
 import React, { useState } from "react"
 import { ContactForm } from "../component/form";
+import TestimonialsSlider from "@/component/Testimonial";
 
 // Engage360 Landing Page (Next.js + Tailwind)
 // - Hero with video on the right
@@ -599,8 +600,9 @@ export default function Engage360LandingPage() {
               </div>
 
               <div className="space-y-3 mb-3">
+                <TestimonialsSlider />
                 {/* {visibleStories.map((story, index) => ( */}
-                  {stories.map((story, index) => (
+                  {/* {stories.map((story, index) => (
                   <div
                     key={`${story.name}-${index}`}
                     className="rounded-2xl border border-slate-100 bg-slate-50/80 px-4 py-3"
@@ -611,7 +613,7 @@ export default function Engage360LandingPage() {
                       {story.title}, {story.company}
                     </p>
                   </div>
-                ))}
+                ))} */}
               </div>
 
               {/* <div className="flex sm:hidden items-center justify-between mb-3 text-[11px] text-slate-400">
