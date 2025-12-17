@@ -545,7 +545,7 @@ export default function Engage360LandingPage() {
                 Engage360 is built on years of experience running QR-based loyalty, rewards, feedback, and authentication
                 for leading brands.
               </p>
-              <div className="grid gap-4 sm:grid-cols-2">
+              <div className="grid gap-4 md:grid-cols-2">
                 <ProofItem
                   title="Single Dashboard for 4 Journeys"
                   description="Loyalty, feedback, authentication, and track & trace analytics in one place—no more switching tools."
@@ -566,7 +566,7 @@ export default function Engage360LandingPage() {
             </div>
 
             {/* Customer Stories Carousel */}
-            <div className="rounded-3xl bg-white border border-slate-100 p-5 shadow-sm">
+            <div className="rounded-3xl bg-white border border-slate-100 p-5 shadow-sm max-w-6xl mx-auto">
               <div className="flex items-center justify-between mb-4">
                 <div>
                   <p className="text-xs uppercase tracking-wide text-[#004bab] font-semibold mb-1">Customer Stories</p>
@@ -574,79 +574,12 @@ export default function Engage360LandingPage() {
                     How brands are using one QR to power multiple journeys.
                   </p>
                 </div>
-                {/* <div className="hidden sm:flex flex-col items-end gap-2 text-[11px] text-slate-400">
-                  <span>
-                    {activePage + 1} / {totalPages}
-                  </span>
-                  <div className="inline-flex rounded-full border border-slate-200 bg-slate-50 p-1">
-                    <button
-                      type="button"
-                      onClick={handlePrevStory}
-                      className="inline-flex items-center justify-center rounded-full px-1.5 py-1 hover:bg-white"
-                      aria-label="Previous stories"
-                    >
-                      <ChevronLeft className="h-3 w-3" />
-                    </button>
-                    <button
-                      type="button"
-                      onClick={handleNextStory}
-                      className="inline-flex items-center justify-center rounded-full px-1.5 py-1 hover:bg-white"
-                      aria-label="Next stories"
-                    >
-                      <ChevronRight className="h-3 w-3" />
-                    </button>
-                  </div>
-                </div> */}
               </div>
 
-              <div className="space-y-3 mb-3">
+              <div className="space-y-3 mb-3 max-w-6xl">
                 <TestimonialsSlider />
-                {/* {visibleStories.map((story, index) => ( */}
-                  {/* {stories.map((story, index) => (
-                  <div
-                    key={`${story.name}-${index}`}
-                    className="rounded-2xl border border-slate-100 bg-slate-50/80 px-4 py-3"
-                  >
-                    <p className="text-sm sm:text-base text-slate-800 mb-2">“{story.quote}”</p>
-                    <p className="text-xs font-semibold text-slate-900">{story.name}</p>
-                    <p className="text-[11px] text-slate-500">
-                      {story.title}, {story.company}
-                    </p>
-                  </div>
-                ))} */}
               </div>
 
-              {/* <div className="flex sm:hidden items-center justify-between mb-3 text-[11px] text-slate-400">
-                <span>
-                  {activePage + 1} / {totalPages}
-                </span>
-                <div className="inline-flex rounded-full border border-slate-200 bg-slate-50 p-1">
-                  <button
-                    type="button"
-                    onClick={handlePrevStory}
-                    className="inline-flex items-center justify-center rounded-full px-1.5 py-1 hover:bg-white"
-                    aria-label="Previous stories"
-                  >
-                    <ChevronLeft className="h-3 w-3" />
-                  </button>
-                  <button
-                    type="button"
-                    onClick={handleNextStory}
-                    className="inline-flex items-center justify-center rounded-full px-1.5 py-1 hover:bg-white"
-                    aria-label="Next stories"
-                  >
-                    <ChevronRight className="h-3 w-3" />
-                  </button>
-                </div>
-              </div> */}
-
-              {/* <div className="rounded-2xl bg-blue-50 px-4 py-3 text-xs text-slate-700">
-                <p className="font-semibold text-[#004bab] mb-1">Digitize. Automate. Grow.</p>
-                <p>
-                  Engage360 is part of the Basiq360 suite—trusted for dealer management, loyalty, SFA, and QR-based
-                  product authentication.
-                </p>
-              </div> */}
             </div>
           </div>
         </section>

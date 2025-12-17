@@ -57,14 +57,14 @@ export default function TestimonialsSlider() {
         slidesToShow: 1,
         slidesToScroll: 1
     };
-    return (
-        <div className="w-full max-w-[1200px] mx-auto">
-            <Slider {...settings} className="h-[100%]">
+    return ( 
+        <div className="max-w-6xl">
+            <Slider {...settings}>
                 {stories.map((story, index) => (
                     <>
                         <div
                             key={`${story.name}-${index}`}
-                            className="w-[98%] mx-auto rounded-2xl border border-slate-100 bg-slate-50/80 px-4 py-3 h-[100%]"
+                            className="rounded-2xl border border-slate-100 bg-slate-50/80 px-4 py-3 h-[100%]"
                         >
                             <p className="text-sm sm:text-base text-slate-800 mb-2">“{story.quote}”</p>
                             <p className="text-xs font-semibold text-slate-900">{story.name}</p>
